@@ -1,3 +1,19 @@
+pipeline "hello_slack" {
+  param "name" {
+    type    = string
+    default = "World"
+  }
+
+  step "message" "notify_hello" {
+    notifier = notifier.default
+    text = "Hello, ${param.name}!"
+  }
+
+  output "ouput_hello" {
+    value = "Hello, ${param.name}!"
+  }
+}
+
 pipeline "get_astronauts" {
   step "http" "whos_in_space" {
     url    = "http://api.open-notify.org/astros"
