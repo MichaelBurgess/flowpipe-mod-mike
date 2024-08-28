@@ -4,10 +4,10 @@ pipeline "hello_slack" {
     default = "World"
   }
 
-  step "message" "notify_hello" {
-    notifier = notifier.default
-    text = "Hello, ${param.name}!"
-  }
+#   step "message" "notify_hello" {
+#     notifier = notifier.default
+#     text = "Hello, ${param.name}!"
+#   }
 
   output "ouput_hello" {
     value = "Hello, ${param.name}!"
