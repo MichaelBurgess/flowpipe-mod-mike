@@ -1,9 +1,3 @@
-variable "name" {
-  type        = string
-  description = "The name of the person/thing."
-  default     = "World"
-}
-
 pipeline "hello" {
   param "name" {
     type    = string
