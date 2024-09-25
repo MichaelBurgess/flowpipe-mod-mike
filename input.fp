@@ -1,6 +1,6 @@
 pipeline "do_stuff" {
   step "input" "confirmation" {
-    notifier = notifier["workspace_owners"]
+    notifier = notifier["default"]
     type     = "button"
     prompt   = "Do you want to approve?"
 
