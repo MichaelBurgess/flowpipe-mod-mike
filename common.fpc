@@ -1,0 +1,22 @@
+integration "slack" "turbot" {
+  token           = "xoxb-111111111111"
+}
+
+notifier "slack" {
+  notify {
+    integration = integration.slack.turbot
+    channel     = "#pipes-notification"
+  }
+}
+
+integration "email" "pipes" {
+  from = "pipes@turbot.com"
+  smtp_host = "smpt.pipes.turbot.com"
+  to = ["pipes@turbot.com"]
+}
+
+notifier "workspace_owners" {
+  notify {
+    integration = integration.email.pipes
+  }
+}
