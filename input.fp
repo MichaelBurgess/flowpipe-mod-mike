@@ -7,7 +7,16 @@ pipeline "input_pipeline" {
     type     = "button"
     prompt   = "Do you want to approve?"
 
-    option "Approve" {}
-    option "Deny" {}
+    option "approve_button" {
+      label = "Approve"
+      value = "approve"
+      style = "ok"
+    }
+
+    option "deny_button" {
+      label = "Deny"
+      value = "deny"
+      style = "alert"
+    }
   }
 }
