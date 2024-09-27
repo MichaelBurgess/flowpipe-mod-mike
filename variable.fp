@@ -5,11 +5,21 @@ variable "default_notifier" {
   default     = "default"
 }
 
-variable "default_pipes_connection" {
+variable "default_turbot_pipes_connection" {
   type        = string
-  title       = "Default Turbot Pipes connection"
+  title       = "Default Turbot Pipes connection."
   description = "The name of the default Turbot Pipes connection to resolve credentials for."
   default     = "default"
+  tags = {
+    folder = "Pipes Setup"
+  }
+}
+
+variable "turbot_pipes_api_base_url" {
+  type        = string
+  title       = "Turbot Pipes API base URL"
+  description = "The Turbot Pipes base URL to use."
+  default     = "https://pipes.turbot.com"
   tags = {
     folder = "Pipes Setup"
   }
@@ -43,15 +53,5 @@ variable "favourite_colours" {
   enum = ["Red", "Green", "Blue"]
   tags = {
     folder = "User Profile"
-  }
-}
-
-variable "pipes_api_base_url" {
-  type        = string
-  title       = "Pipes API Base URL"
-  description = "The Turbot Pipes base URL"
-  default     = "https://pipes.turbot.com"
-  tags = {
-    folder = "Pipes Setup"
   }
 }
