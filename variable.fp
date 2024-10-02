@@ -25,6 +25,11 @@ variable "pipes_api_base_url" {
   }
 }
 
+variable "database" {
+  type    = connection.steampipe_pg
+  default = connection.steampipe_pg.default
+}
+
 variable "name" {
   type        = string
   title       = "Name"
