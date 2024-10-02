@@ -1,14 +1,14 @@
 variable "default_notifier" {
-  type        = string
   title       = "Default Notifier"
   description = "The name of the default notifier."
+  type        = string
   default     = "default"
 }
 
 variable "default_pipes_connection" {
-  type        = string
   title       = "Default Pipes connection."
   description = "The name of the default Pipes connection to resolve credentials for."
+  type        = string
   default     = "default"
   tags = {
     folder = "Pipes Setup"
@@ -16,24 +16,26 @@ variable "default_pipes_connection" {
 }
 
 variable "pipes_api_base_url" {
-  type        = string
   title       = "Turbot Pipes API base URL"
   description = "The Turbot Pipes base URL to use."
+  type        = string
   default     = "https://pipes.turbot.com"
   tags = {
     folder = "Pipes Setup"
   }
 }
 
-variable "database" {
-  type    = connection.steampipe
-  default = connection.steampipe.default
+variable "steampipe_database" {
+  title       = "Steampipe Database"
+  description = "The Steampipe database connection."
+  type        = connection.steampipe
+  default     = connection.steampipe.default
 }
 
 variable "name" {
-  type        = string
   title       = "Name"
   description = "The name of the person."
+  type        = string
   default     = "Mike"
   tags = {
     folder = "User Profile"
