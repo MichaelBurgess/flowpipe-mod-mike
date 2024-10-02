@@ -3,10 +3,10 @@ pipeline "list_s3_buckets" {
   description = "List all S3 buckets in the default Steampipe connection."
 
   param "database" {
-    type    = connection.steampipe_pg
+    type    = connection.steampipe
     description = "The Steampipe database connection to use."
     # default     = var.database
-    default = connection.steampipe_pg.default
+    default = connection.steampipe.default
   }
 
   step "query" "list" {
