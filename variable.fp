@@ -5,17 +5,17 @@ variable "default_notifier" {
   default     = "default"
 }
 
-variable "default_turbot_pipes_connection" {
+variable "default_pipes_connection" {
   type        = string
-  title       = "Default Turbot Pipes connection."
-  description = "The name of the default Turbot Pipes connection to resolve credentials for."
+  title       = "Default Pipes connection."
+  description = "The name of the default Pipes connection to resolve credentials for."
   default     = "default"
   tags = {
     folder = "Pipes Setup"
   }
 }
 
-variable "turbot_pipes_api_base_url" {
+variable "pipes_api_base_url" {
   type        = string
   title       = "Turbot Pipes API base URL"
   description = "The Turbot Pipes base URL to use."
