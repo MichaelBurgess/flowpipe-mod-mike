@@ -1,8 +1,8 @@
 variable "default_notifier" {
   title       = "Default Notifier"
   description = "The name of the default notifier."
-  type        = string
-  default     = "default"
+  type        = notifier
+  default     = notifier.default
 }
 
 variable "default_pipes_connection" {
