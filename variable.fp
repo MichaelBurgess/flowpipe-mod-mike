@@ -6,7 +6,7 @@ variable "default_notifier" {
 }
 
 variable "default_pipes_connection" {
-  title       = "Default Pipes connection."
+  title       = "Default Pipes connection"
   description = "The name of the default Pipes connection to resolve credentials for."
   type        = string
   default     = "default"
