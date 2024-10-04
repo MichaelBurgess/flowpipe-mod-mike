@@ -1,4 +1,4 @@
-pipeling "long_sleep" {
+pipeline "long_sleep" {
   title       = "Long Sleep"
   description = "Sleep for a long time."
 
