@@ -9,7 +9,7 @@ pipeline "list_pipes_orgs" {
   }
 
   param "pipes_connection" {
-    type        = string
+    type        = connection.pipes
     description = "The Turbot Pipes connection to use."
     default     = var.default_pipes_connection
   }
@@ -19,7 +19,7 @@ pipeline "list_pipes_orgs" {
     method   = "get"
     insecure = param.api_base_url == "https://pipes.turbot-local.com:8443"
     request_headers = {
-      Authorization : "Bearer ${connection.pipes[param.pipes_connection].token}"
+      Authorization : "Bearer ${param.pipes_connection.token}"
       Content-Type : "application/json"
     }
   }
