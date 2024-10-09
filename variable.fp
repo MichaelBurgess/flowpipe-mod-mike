@@ -5,6 +5,13 @@ variable "default_notifier" {
   default     = notifier.default
 }
 
+variable "default_notifiers" {
+  title       = "Default Notifiers"
+  description = "The names of the default notifiers."
+  type        = list(notifier)
+  default     = [notifier.default]
+}
+
 variable "default_pipes_connection" {
   title       = "Default Pipes connection"
   description = "The name of the default Pipes connection to resolve credentials for."
