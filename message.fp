@@ -1,6 +1,6 @@
 pipeline "message_pipeline" {
-  title = "Input Pipeline"
-  description = "Simple pipeline with input step"
+  title = "Message Pipeline"
+  description = "Simple pipeline with message step"
 
   param "name" {
     type = string
