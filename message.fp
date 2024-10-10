@@ -7,8 +7,14 @@ pipeline "message_pipeline" {
     default = var.name
   }
 
+  param "notifiers" {
+    type = list(notifier)
+    default = var.default_notifiers
+  }
+
   step "message" "say_hello" {
-    notifier = var.default_notifier
+    for_each = param.notifiers
+    notifier = notifier[each.value.name]
     text     = "Hello, ${param.name}"
   }
 }
