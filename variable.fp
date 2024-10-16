@@ -26,7 +26,7 @@ variable "pipes_api_base_url" {
   title       = "Turbot Pipes API base URL"
   description = "The Turbot Pipes base URL to use."
   type        = string
-  default     = "https://pipes.turbot.com"
+  default     = "https://pipes.turbot-stg.com"
   tags = {
     folder = "Pipes Setup"
   }

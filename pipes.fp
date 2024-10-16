@@ -24,6 +24,12 @@ pipeline "list_pipes_orgs" {
     }
   }
 
+  step "message" "output_orgs" {
+    for_each = step.http.list_pipes_actor_orgs.response_body.items
+    notifier = var.default_notifier
+    text = "Access to org: ${each.value.org.handle}"
+  }
+
   output "output_orgs" {
     value = step.http.list_pipes_actor_orgs.response_body.items[*].org.handle
   }
