@@ -5,3 +5,5 @@ out
 gen
 
 connections.fpc
+notifiers.fpc
+flowpipe.fpvars
